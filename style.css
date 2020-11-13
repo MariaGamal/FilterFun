@@ -1,0 +1,21 @@
+body {
+  background-color :  #d1d1e0;
+  border: 2px solid white ;
+}
+canvas {
+  width: img.getwidth();
+  height: img.getHeight();
+  border:1px solid;
+}
+.header {
+  color:rgb(128, 128, 128);
+}
+p{
+  color:rgb(102, 0, 102);
+  font-size: 30px ;
+}
+div {
+  font-family: 'lato' , sans-serif ;
+  font-style: normal ;
+  padding: 20px ;
+}
