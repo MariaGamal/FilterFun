@@ -102,18 +102,7 @@ function myfilter() {
   }
 }
 
-function glitter(){
-  for ( i=0 ; i< 100 ; i++) {
-    X = Math.floor(image2.getWidth() * Math.random());
-    Y = Math.floor(image2.getHeight() * Math.random());
-    // print(x,y);
-    pix = image2.getPixel(X,Y);
-    pix.setRed(230);
-    pix.setGreen(232);
-    pix.setBlue(250);
-    v = X; 
-  }
-}
+
 function makerainbow(){
   if (check(image3)) {
     filterrainbow();
@@ -217,36 +206,8 @@ function doblur() {
   }
    new_image.drawTo(canvas);
 }
-function Trig(){
-  if (check(image5)){
-    maketrig();
-  }
-}
-function maketrig(){
-  var newimage = new SimpleImage(image5.getWidth(), image5.getHeight());
-  var h = image5.getHeight();
-  var w = image5.getWidth();
-  for ( var pixel of image5.values()) {
-    x= pixel.getX();
-    y = pixel.getY();
-    if (y == Math.round((h/5.0))){
-        Y = Math.round((Math.sin(x) +(h/5)));
-        pix = image5.getPixel(x,Y);
-        newimage.setPixel(x,Y,pix);
-        // print(x,y,Y)
-    }
-    if (y == Math.round(4*h/5)){
-        Y = Math.round(Math.sin(x) + Math.round(4*h/5));
-        pix = image5.getPixel(x,Y);
-        newimage.setPixel(x,Y,pix);
-        // print(x,y,Y)
-    }
-    if (y > 41.0 && y < 169.0){
-        newimage.setPixel(x,y,pixel);
-    }
-  }
-newimage.drawTo(canvas);
-}
+
+
 
 
 // Copyright 2015 Owen Astrachan, Drew Hilton, Susan Rodger, Robert Duvall
